@@ -1,10 +1,9 @@
 #personal wrapper for yt-dlp
-version=2.2                                                                                                     
+version=2.3                                                                                                   
 echo youtube downloader wrapper, version ${version}
  
 #argc check
-if [ $# -lt 2  ] || [ $1 = -h  ] || [ $1 = help ] || [ $
-1 = --help  ];
+if [ $# -lt 2  ] || [ $1 = -h  ] || [ $1 = help ] || [ $1 = --help  ];
 then
         echo "usage: bash download.sh <mp3/mp4> <URL> [path]"
         exit
@@ -28,8 +27,7 @@ else
 fi
  
 #actual download
-yt-dlp -o "${path}/temp/%(title)s.%(ext)s" --progress ${
-arg} "$2"
+yt-dlp -o "${path}/temp/%(title)s.%(ext)s" --progress ${arg} "$2"
  
 #change metdata
 restore=`pwd`
