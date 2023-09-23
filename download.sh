@@ -33,8 +33,7 @@ yt-dlp -o "${path}/temp/%(title)s.%(ext)s" --progress ${arg} "$2"
 restore=`pwd`
 cd "${path}/temp"
 for i in *; do
-        eyeD3 --quiet --release-date `date +%Y-%m-%dT%H:
-%M:%S` "$i"
+        eyeD3 --quiet --release-date `date +%Y-%m-%dT%H:%M:%S` "$i"
         mv "$i" "${path}"
 done
 cd ${restore}
