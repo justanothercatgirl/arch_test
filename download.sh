@@ -1,5 +1,8 @@
 #personal wrapper for yt-dlp
-version=2.3                                                                                                   
+
+set -e
+
+version=2.6                                                                                                   
 echo youtube downloader wrapper, version ${version}
  
 #argc check
@@ -23,11 +26,11 @@ fi
 if [ $# -eq 3 ]; then
         path="$3"
 else
-        path="/storage/emulated/0/term_download_$1"
+        path="/mnt/D/media/term_download_$1"
 fi
  
 #actual download
-yt-dlp -o "${path}/temp/%(title)s.%(ext)s" --progress ${arg} "$2"
+yt-dlp -o "${path}/temp/%(playlist_title& - |)s%(playlist_autonumber& - |)s%(title)s.%(ext)s" --progress ${arg} "$2"
  
 #change metdata
 restore=`pwd`
