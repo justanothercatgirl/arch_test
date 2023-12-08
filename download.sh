@@ -1,8 +1,9 @@
+#!/bin/bash
 #personal wrapper for yt-dlp
 
 set -e
 
-version=2.6                                                                                                   
+version=2.7.0                                                                                                  
 echo youtube downloader wrapper, version ${version}
  
 #argc check
@@ -26,7 +27,7 @@ fi
 if [ $# -eq 3 ]; then
         path="$3"
 else
-        path="/mnt/D/media/term_download_$1"
+        path="/mnt/D/media/audio_sync/term_download_$1"
 fi
  
 #actual download
